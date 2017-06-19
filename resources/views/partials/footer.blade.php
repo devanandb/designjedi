@@ -1,1 +1,1 @@
-Footer goes here
+<footer class="uk-clearfix">Footer goes here</footer>

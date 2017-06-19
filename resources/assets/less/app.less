@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 /* Define custome varibles */
 @import 'theme/default/variables.less';
 
@@ -11,9 +12,37 @@
 
 
 /* Pricing pages */
-@import 'layouts/pricing/index.less';
+@import 'layouts/home.less';
 
 
 html, body, .wrapper {
-	height:95vh;
+	/*height:95vh;*/
+    font-family: 'Open Sans', sans-serif !important; 
+}
+
+.bg-awesome {
+    height: 800px;
+    top: -200px;
+    background-color: #edf2f7;
+}
+
+.bg-awesome,.bg-some {
+    content: "";
+    position: absolute;
+    width: 100%;
+    -webkit-transform: skewY(-13deg);
+    transform: skewY(-13deg);
+    background-size: 90%;
+    z-index: -1
+}
+
+.bg-img {
+    background-image: url(../images/hero-img.jpg);
+	height:1000px;
+	position: absolute;
+	z-index: -1;
+	width:100%;
+	-webkit-transform: skewY(0deg);
+    transform: skewY(0deg);
+    background-size: cover;
 }

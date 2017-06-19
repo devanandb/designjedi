@@ -7,28 +7,18 @@
 	                Jim Nieters
 	            </a>
 	    	
-	    	    <ul class="uk-navbar-nav">
-	    	        <li>
-	    	            <a href="#">
-	    	                Leadership
-	    	            </a>
-	    	        </li>
-	    	        <li>
-	    	            <a href="#">
-	    	                Design
-	    	            </a>
-	    	        </li>
-	    	        <li>
-	    	            <a href="#">
-	    	                Presence
-	    	            </a>
-	    	        </li>
-	    	    </ul>
+	    	    
 	    	</div>
 	
 	    	<div class="uk-navbar-right">
-	
-		        <ul class="uk-navbar-nav">
+				<ul class="uk-navbar-nav">
+	    	        @foreach ($categories as $cat)
+                        <li class="">
+                            <a href="/category/{{$cat->slug}}">{{$cat->title}}</a>
+                        </li>
+                    @endforeach
+	    	    </ul>
+		        {{-- <ul class="uk-navbar-nav">
 		            @if (Auth::guest())
 	                    <li><a href="{{ route('login') }}">Login</a></li>
 	                    <li><a href="{{ route('register') }}">Register</a></li>
@@ -38,22 +28,20 @@
 	                            {{ Auth::user()->name }} <span class="caret"></span>
 	                        </a>
 	
-	                        <ul class="dropdown-menu" role="menu">
-	                            <li>
-	                                <a href="{{ route('logout') }}"
-	                                    onclick="event.preventDefault();
-	                                             document.getElementById('logout-form').submit();">
-	                                    Logout
-	                                </a>
-	
-	                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-	                                    {{ csrf_field() }}
-	                                </form>
-	                            </li>
-	                        </ul>
 	                    </li>
+	                    <li>
+                            <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
 	                @endif
-		        </ul>
+		        </ul> --}}
 	
 		    </div>
 	</nav>

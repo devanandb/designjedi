@@ -1,4 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 /* Define custome varibles */
+/*@header-font:;*/
 /* Override uikit varibles */
 /* ========================================================================
    Component: Base
@@ -10754,8 +10756,73 @@ td.uk-text-break {
 /* Import mixins here */
 /* Custom styles */
 /* Pricing pages */
+.hero-section {
+  margin-top: 100px;
+  font-size: 30px;
+  /*text-align: right;*/
+}
+.categories {
+  display: block;
+  margin: 100px 0px;
+}
+.categories .img-card {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.categories .uk-card-media-top {
+  position: relative;
+}
+.categories .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+.categories .uk-card-default {
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07) !important;
+}
+.categories .uk-card-title {
+  position: absolute;
+  top: 40px;
+  font-size: 34px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  /*padding-left: 30px;*/
+  color: #ffffff;
+  font-family: 'Open Sans', "Helvetica Neue", Arial, sans-serif !important;
+}
 html,
 body,
 .wrapper {
-  height: 95vh;
+  /*height:95vh;*/
+  font-family: 'Open Sans', sans-serif !important;
+}
+.bg-awesome {
+  height: 800px;
+  top: -200px;
+  background-color: #edf2f7;
+}
+.bg-awesome,
+.bg-some {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: skewY(-13deg);
+  transform: skewY(-13deg);
+  background-size: 90%;
+  z-index: -1;
+}
+.bg-img {
+  background-image: url(/images/hero-img.jpg?2a37634e5c1bf8cf8789eff8c6205072);
+  height: 1000px;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  -webkit-transform: skewY(0deg);
+  transform: skewY(0deg);
+  background-size: cover;
 }
