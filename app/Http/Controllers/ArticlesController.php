@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\Category;
 
 class ArticlesController extends Controller
 {
@@ -15,7 +16,8 @@ class ArticlesController extends Controller
     public function index()
     {
         $articles = Article::all();
-        return view('articles.index', compact('articles'));
+        $categories = Category::all();
+        return view('articles.index', compact('articles', 'categories'));
     }
 
     /**

@@ -5,6 +5,6 @@
 @endsection
 
 @section('content')
-	This is awesome
+	
 
 @endsection
