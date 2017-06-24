@@ -12,12 +12,10 @@ node('master') {
             sh "php artisan key:generate"
 
             // Run any static asset building, if needed
-            // sh "npm install && gulp --production"
-        }
-        
-        stage('compile') {
             sh "npm install && npm run production"
         }
+        
+       
 
         //stage('test') {
             // Run any testing suites
