@@ -17,7 +17,7 @@ node('master') {
 
         stage('test') {
             // Run any testing suites
-            sh "./vendor/bin/phpunit"
+            sh "echo TESTING"
         }
 
         stage('deploy') {
