@@ -19,10 +19,10 @@ node('master') {
             sh "npm install && npm run production"
         }
 
-        stage('test') {
+        //stage('test') {
             // Run any testing suites
-            sh "echo TESTING"
-        }
+          //  sh "echo 'TESTING'"
+        //}
 
         stage('deploy') {
             // If we had ansible installed on the server, setup to run an ansible playbook
